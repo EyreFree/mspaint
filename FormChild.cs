@@ -90,24 +90,6 @@ namespace Paint
                     switch (m_FormMain.m_ActiveTool)
                     {
                         case ToolsType.裁剪:
-                            m_FormMain.StatusLabel_Middle.Text = strInf;
-                            if (Point.Empty == Tools.m_PreviousPoint)
-                            {
-                                Tools.m_PreviousPoint = new Point(e.X, e.Y);
-                                m_PointList.Add(Tools.m_PreviousPoint);
-                            }
-                            else
-                            {
-                                Pen newPen = new Pen(m_FormMain.GetForegroundColor(), 1);
-                                Point newPoint = new Point(e.X, e.Y);
-                                m_PointList.Add(newPoint);
-                                Graphics newGraphics = Graphics.FromImage(m_TempImage);
-                                //newGraphics.DrawLine(newPen, newPoint, m_LastPoint);
-                                Point[] newPoints = m_PointList.ToArray();
-                                newGraphics.DrawLines(newPen, newPoints);
-                                this.CreateGraphics().DrawImage(m_TempImage, Point.Empty);
-                                Tools.m_PreviousPoint = newPoint;
-                            }
                             break;
                         case ToolsType.橡皮:
                             m_FormMain.StatusLabel_Middle.Text = strInf;
@@ -194,15 +176,6 @@ namespace Paint
                 switch (m_FormMain.m_ActiveTool)
                 {
                     case ToolsType.裁剪:
-                        if (0 == m_PointList.Count)
-                        {
-                            m_PointList.Add(Tools.m_PreviousPoint);
-                        }
-                        else
-                        {
-                            m_PointList.Clear();
-                            m_PointList.Add(Tools.m_PreviousPoint);
-                        }
                         break;
                     case ToolsType.橡皮:
                         Tools.橡皮(MouseStateType.MouseDown, new Point(e.X, e.Y), m_FormMain.GetBackgroundColor(), ref m_SourceImage);
@@ -266,38 +239,7 @@ namespace Paint
                 switch (m_FormMain.m_ActiveTool)
                 {
                     case ToolsType.裁剪:
-                        {
-                            Graphics newGraphics = Graphics.FromImage(m_TempImage);
-                            newGraphics.DrawLine(new Pen(m_FormMain.GetForegroundColor(), 1), m_PointList[0], new Point(e.X, e.Y));
-
-                            //GraphicsPath
-                            Pen newPen = new Pen(m_FormMain.GetForegroundColor(), 1);
-                            GraphicsPath Tailoring = new GraphicsPath();
-                            Point[] newPoints = m_PointList.ToArray();
-                            Tailoring.AddLines(newPoints);
-                            Tailoring.CloseFigure();
-                            /*
-                            m_Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                            PathGradientBrush pgb = new PathGradientBrush(Tailoring);
-                            pgb.CenterColor = Color.White;
-                            pgb.SurroundColors = new Color[]
-                            {
-                                Color.Blue
-                            };
-                            m_Graphics.FillPath(pgb, Tailoring);
-                            pgb.Dispose();*/
-
-                            Brush newbrush = new TextureBrush(m_SourceImage);//bgImage是你的背景图
-                            newGraphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, m_TempImage.Width, m_TempImage.Height));
-                            newGraphics.FillPath(newbrush, Tailoring); //path 是你的GraphicsPath
-                            Graphics.FromImage(m_SourceImage).DrawImage(m_TempImage, Point.Empty); //path 是你的GraphicsPath
-                            //TODO:
-
-                            this.Invalidate(Rectangle.Empty, false);
-                            m_TempImage = new Bitmap(m_SourceImage.Width, m_SourceImage.Height);
-                            m_PointList.Clear();
-                            break;
-                        }
+                        break;
                     case ToolsType.橡皮:
                         Tools.橡皮(MouseStateType.MouseUp, new Point(e.X, e.Y), m_FormMain.GetBackgroundColor(), ref m_SourceImage);
                         break;

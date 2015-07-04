@@ -506,24 +506,7 @@ namespace Paint
                 case ToolsType.选定:
                 case ToolsType.文字:
                 case ToolsType.裁剪:
-                    {
-                        if (bIsInit)
-                        {
-                            Tools.m_ToolSize = ToolSize.Size_1;
-                        }
-                        for (int i = 0; i < iSelectCount; ++i)
-                        {
-                            int iRuleY = (int)((panelToolSelection.Height - 8) / iSelectCount);
-                            m_PointList[i].Tag = i;
-                            m_PointList[i].BackColor = Color.Black;
-                            m_PointList[i].Size = new Size(panelToolSelection.Width - 8, iRuleY - 1);
-                            m_PointList[i].Location = new Point(2, 3 + iRuleY * i);
-                            CreateToolSelectionBackGroundImage(ToolsType.裁剪, m_PointList[i], i);
-                            m_PointList[i].MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolSelection_Mouse_Down);
-                            panelToolSelection.Controls.Add(m_PointList[i]);
-                        }
-                        break;
-                    }
+                    break;
                 case ToolsType.放大镜:
                     break;
                 case ToolsType.刷子:
