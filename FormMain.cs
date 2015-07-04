@@ -60,37 +60,37 @@ namespace Paint
 
         private void 从扫描仪或照相机ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "从扫描仪或照相机", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 打印预览ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "打印预览", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 页面设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "页面设置", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 打印ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "打印", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 发送ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "发送", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 设置为墙纸平铺ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "设置为墙纸平铺", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 设置为墙纸居中ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "设置为墙纸居中", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,48 +100,47 @@ namespace Paint
 
         private void 撤销ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
+            MessageBox.Show("Unfinished.", "撤销", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 重复ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "重复", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 剪切ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "剪切", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 复制ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "复制", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-        private void 黏贴ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 粘贴ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "粘贴", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 清除选定内容ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "清除选定内容", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 全选ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "全选", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 复制到ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "复制到", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-        private void 黏贴来源ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 粘贴来源ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "粘贴来源", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 工具箱ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -211,22 +210,22 @@ namespace Paint
 
         private void 缩放ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "缩放", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 查看位图ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "查看位图", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 翻转旋转ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "翻转旋转", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 拉伸扭曲ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "拉伸扭曲", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 反色ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -237,17 +236,17 @@ namespace Paint
 
         private void 属性ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "属性", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 清除图形ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "清除图形", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 不透明处理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "不透明处理", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 编辑颜色EToolStripMenuItem_Click(object sender, EventArgs e)
@@ -264,23 +263,23 @@ namespace Paint
 
         private void 帮助主题ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "帮助主题", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void 关于画图ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Unfinished.", "关于画图", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void toolStripButton_裁剪_Click(object sender, EventArgs e)
         {
-            SetActiveTool(ToolsType.裁剪);
+            //SetActiveTool(ToolsType.裁剪);
+            MessageBox.Show("Unfinished.", "裁剪", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void toolStripButton_橡皮_Click(object sender, EventArgs e)
         {
             SetActiveTool(ToolsType.橡皮);
-
         }
 
         private void toolStripButton_取色_Click(object sender, EventArgs e)
@@ -315,18 +314,20 @@ namespace Paint
 
         private void toolStripButton_选定_Click(object sender, EventArgs e)
         {
-            SetActiveTool(ToolsType.选定);
-
+            MessageBox.Show("Unfinished.", "选定", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //SetActiveTool(ToolsType.选定);
         }
 
         private void toolStripButton_填充_Click(object sender, EventArgs e)
         {
-            SetActiveTool(ToolsType.填充);
+            MessageBox.Show("Unfinished.", "填充", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //SetActiveTool(ToolsType.填充);
         }
 
         private void toolStripButton_放大镜_Click(object sender, EventArgs e)
         {
-            SetActiveTool(ToolsType.放大镜);
+            MessageBox.Show("Unfinished.", "放大镜", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //SetActiveTool(ToolsType.放大镜);
         }
 
         private void toolStripButton_刷子_Click(object sender, EventArgs e)
@@ -387,11 +388,7 @@ namespace Paint
         //鼠标拖放进入窗体用户区
         private void OnDragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-            e.Effect = DragDropEffects.None;
+            e.Effect = DragDropEffects.Copy;
         }
     }
 }

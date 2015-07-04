@@ -793,11 +793,11 @@
             // 
             // 黏贴ToolStripMenuItem
             // 
-            this.黏贴ToolStripMenuItem.Name = "黏贴ToolStripMenuItem";
+            this.黏贴ToolStripMenuItem.Name = "粘贴ToolStripMenuItem";
             this.黏贴ToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+V";
             this.黏贴ToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.黏贴ToolStripMenuItem.Text = "黏贴(&P)";
-            this.黏贴ToolStripMenuItem.Click += new System.EventHandler(this.黏贴ToolStripMenuItem_Click);
+            this.黏贴ToolStripMenuItem.Text = "粘贴(&P)";
+            this.黏贴ToolStripMenuItem.Click += new System.EventHandler(this.粘贴ToolStripMenuItem_Click);
             // 
             // 清除选定内容ToolStripMenuItem
             // 
@@ -829,10 +829,10 @@
             // 
             // 黏贴来源ToolStripMenuItem
             // 
-            this.黏贴来源ToolStripMenuItem.Name = "黏贴来源ToolStripMenuItem";
+            this.黏贴来源ToolStripMenuItem.Name = "粘贴来源ToolStripMenuItem";
             this.黏贴来源ToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.黏贴来源ToolStripMenuItem.Text = "黏贴来源(&F)...";
-            this.黏贴来源ToolStripMenuItem.Click += new System.EventHandler(this.黏贴来源ToolStripMenuItem_Click);
+            this.黏贴来源ToolStripMenuItem.Text = "粘贴来源(&F)...";
+            this.黏贴来源ToolStripMenuItem.Click += new System.EventHandler(this.粘贴来源ToolStripMenuItem_Click);
             // 
             // 查看ToolStripMenuItem
             // 
