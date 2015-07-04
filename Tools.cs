@@ -424,7 +424,8 @@ namespace Paint
             }
         }
 
-        public static void 曲线(MouseStateType mouseType, Point targetPoint, Color colorType, ref Bitmap sourceBitmap, ref Bitmap temporyImage)
+        //real参数：为了在切换工具后及时将临时曲线绘制并销毁点数组
+        public static void 曲线(MouseStateType mouseType, Point targetPoint, Color colorType, Bitmap sourceBitmap, Bitmap temporyImage, bool real = false)
         {
             switch (mouseType)
             {
@@ -456,14 +457,33 @@ namespace Paint
                     break;
                 case MouseStateType.MouseUp:
                     {
-                        if (m_PointList.Count < 3)
+                        if (!real)
                         {
-                            m_PointList.Add(targetPoint);
+                            if (m_PointList.Count < 3)
+                            {
+                                m_PointList.Add(targetPoint);
+                            }
+                            else
+                            {
+                                m_TempImageUsed = false;
+                                Graphics.FromImage(sourceBitmap).DrawBezier(new Pen(colorType, (int)m_ToolSize), m_PointList[1], targetPoint, m_PointList[2], m_PointList[0]);
+                                m_PointList.Clear();
+                            }
                         }
                         else
                         {
                             m_TempImageUsed = false;
-                            Graphics.FromImage(sourceBitmap).DrawBezier(new Pen(colorType, (int)m_ToolSize), m_PointList[1], targetPoint, m_PointList[2], m_PointList[0]);
+                            switch (m_PointList.Count)
+                            {
+                                case 1:
+                                    break;
+                                case 2:
+                                    Graphics.FromImage(sourceBitmap).DrawLine(new Pen(colorType, (int)m_ToolSize), m_PointList[0], m_PointList[1]);
+                                    break;
+                                case 3:
+                                    Graphics.FromImage(sourceBitmap).DrawBezier(new Pen(colorType, (int)m_ToolSize), m_PointList[1], m_PointList[2], m_PointList[0], m_PointList[0]);
+                                    break;
+                            }
                             m_PointList.Clear();
                         }
                         m_MouseState = MouseStateType.MouseUp;

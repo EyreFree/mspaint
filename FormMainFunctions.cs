@@ -361,6 +361,11 @@ namespace Paint
                 Tools.Init();
                 m_FormChild.Draw();
             }
+            else if (ToolsType.曲线 == m_ActiveTool)
+            {
+                Tools.曲线(MouseStateType.MouseUp, new Point(0, 0), GetForegroundColor(), m_FormChild.m_SourceImage, m_FormChild.m_TempImage, true);
+                m_FormChild.Draw();
+            }
             ToolStripButton oldButton = GetToolButton(m_ActiveTool);
             ToolStripButton newButton = GetToolButton(theType);
             if (null != newButton)

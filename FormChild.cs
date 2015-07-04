@@ -141,7 +141,7 @@ namespace Paint
                             break;
                         case ToolsType.曲线:
                             m_FormMain.StatusLabel_Right.Text = strInf;
-                            Tools.曲线(MouseStateType.MouseMove, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), ref m_SourceImage, ref m_TempImage);
+                            Tools.曲线(MouseStateType.MouseMove, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), m_SourceImage, m_TempImage);
                             this.Draw();
                             break;
                         case ToolsType.多边形:
@@ -217,7 +217,7 @@ namespace Paint
                         m_FormMain.文字工具栏ToolStripMenuItem.Enabled = alphaTextBox.Visible;
                         break;
                     case ToolsType.曲线:
-                        Tools.曲线(MouseStateType.MouseDown, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), ref m_SourceImage, ref m_TempImage);
+                        Tools.曲线(MouseStateType.MouseDown, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), m_SourceImage, m_TempImage);
                         break;
                     case ToolsType.多边形:
                         Tools.多边形(MouseStateType.MouseDown, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), ref m_SourceImage, ref m_TempImage);
@@ -281,7 +281,7 @@ namespace Paint
                         Tools.文字(MouseStateType.MouseUp, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), ref m_SourceImage, ref alphaTextBox);
                         break;
                     case ToolsType.曲线:
-                        Tools.曲线(MouseStateType.MouseUp, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), ref m_SourceImage, ref m_TempImage);
+                        Tools.曲线(MouseStateType.MouseUp, new Point(e.X, e.Y), m_FormMain.GetForegroundColor(), m_SourceImage, m_TempImage);
                         this.Draw();
                         break;
                     case ToolsType.多边形:
