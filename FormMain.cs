@@ -378,10 +378,12 @@ namespace Paint
             if (CheckChildForm())
             {
                 var filePath = (string[])e.Data.GetData(DataFormats.FileDrop);
+                var finalPath = filePath[0];
                 foreach (var file in filePath)         // 每个file都是被拖拽文件的完整路径
                 {
-                    InitBitmap(file);
+                    finalPath = file;
                 }
+                InitBitmap(finalPath);
             }
         }
 
